@@ -140,3 +140,52 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+.demo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.demo-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.demo-item {
+  min-width: 0;
+}
+
+.demo-item img {
+  border-radius: 8px;
+  display: block;
+}
+
+.demo-pair {
+  display: flex;
+  gap: 6px;
+}
+
+.demo-caption {
+  color: #666;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* Stack the demo grid vertically on narrow screens so nothing overflows the viewport */
+@media (max-width: 800px) {
+  .demo-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .demo-item img {
+    height: auto !important;
+    width: 100%;
+  }
+  .demo-pair img {
+    width: calc(50% - 3px);
+  }
+}
